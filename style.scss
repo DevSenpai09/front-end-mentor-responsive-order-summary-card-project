@@ -1,4 +1,150 @@
+// IMPORTS
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,700;0,900;1,500&display=swap");
+
+// VARIABLES
+$paleblue: hsl(225, 100%, 94%);
+$brightblue: hsl(245, 75%, 52%);
+$verypaleblue: hsl(225, 100%, 98%);
+$Desaturatedpaleblue: hsl(224, 23%, 55%);
+$darkblue: hsl(223, 47%, 23%);
+
 * {
   margin: 0;
   padding: 0;
+  font-size: 16px;
+  text-align: center;
+  font-family: "Red Hat Display", sans-serif;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: $paleblue;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  // CARD
+
+  .card {
+    background-color: #fff;
+    width: calc(100vw - 40px);
+    max-width: 380px;
+    border-radius: 25px;
+    box-shadow: 0px 20px 20px 0px rgba($color: #000000, $alpha: 0.15);
+
+    .img {
+      width: 100%;
+      height: auto;
+
+      img {
+        border-radius: 25px 25px 0 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .card_info {
+      padding: 30px;
+      display: grid;
+      grid-gap: 30px;
+
+      .order {
+        h1 {
+          font-size: 20px;
+          color: $darkblue;
+          font-weight: 900;
+        }
+
+        p {
+          font-weight: 500;
+          color: #7280a7;
+          line-height: 25px;
+          letter-spacing: 1px;
+          word-spacing: 1px;
+          margin-top: 10px;
+        }
+      }
+
+      .plan {
+        background-color: $verypaleblue;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px;
+
+        .plan_info {
+          justify-self: left;
+          display: grid;
+          grid-gap: 7px;
+
+          h2 {
+            color: $darkblue;
+            font-weight: 900;
+          }
+
+          p {
+            color: $Desaturatedpaleblue;
+          }
+        }
+
+        a {
+          justify-self: right;
+          color: $brightblue;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .btns {
+      display: grid;
+
+      button {
+        padding: 10px;
+        color: $verypaleblue;
+        background-color: $brightblue;
+        border-radius: 10px;
+        box-shadow: 0px 20px 20px 0px rgba($color: #000000, $alpha: 0.15);
+        &:hover {
+          transition: all 0.5s ease;
+          font-weight: 900;
+          opacity: 0.8;
+        }
+      }
+
+      a {
+        color: $Desaturatedpaleblue;
+        margin-top: 20px;
+        &:hover {
+          transition: all 0.5s ease;
+          color: $darkblue;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .plan {
+    padding: 15px !important;
+    grid-template-columns: 1fr 1fr !important;
+
+    img {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 798px) {
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
 }

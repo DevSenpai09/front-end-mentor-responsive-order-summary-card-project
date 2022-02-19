@@ -1,5 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,700;0,900;1,500&display=swap");
 * {
   margin: 0;
   padding: 0;
+  font-size: 16px;
+  text-align: center;
+  font-family: "Red Hat Display", sans-serif;
+  border: none;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #e0e8ff;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body .card {
+  background-color: #fff;
+  width: calc(100vw - 40px);
+  max-width: 380px;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+body .card .img {
+  width: 100%;
+  height: auto;
+}
+
+body .card .img img {
+  border-radius: 25px 25px 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+body .card .card_info {
+  padding: 30px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 30px;
+}
+
+body .card .card_info .order h1 {
+  font-size: 20px;
+  color: #1f2f56;
+  font-weight: 900;
+}
+
+body .card .card_info .order p {
+  font-weight: 500;
+  color: #7280a7;
+  line-height: 25px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  margin-top: 10px;
+}
+
+body .card .card_info .plan {
+  background-color: #f5f7ff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+body .card .card_info .plan .plan_info {
+  -ms-grid-column-align: left;
+      justify-self: left;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 7px;
+}
+
+body .card .card_info .plan .plan_info h2 {
+  color: #1f2f56;
+  font-weight: 900;
+}
+
+body .card .card_info .plan .plan_info p {
+  color: #7280a7;
+}
+
+body .card .card_info .plan a {
+  -ms-grid-column-align: right;
+      justify-self: right;
+  color: #3829e0;
+}
+
+body .card .card_info .plan a:hover {
+  text-decoration: none;
+}
+
+body .card .btns {
+  display: -ms-grid;
+  display: grid;
+}
+
+body .card .btns button {
+  padding: 10px;
+  color: #f5f7ff;
+  background-color: #3829e0;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+body .card .btns button:hover {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-weight: 900;
+  opacity: 0.8;
+}
+
+body .card .btns a {
+  color: #7280a7;
+  margin-top: 20px;
+}
+
+body .card .btns a:hover {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: #1f2f56;
+}
+
+@media screen and (max-width: 375px) {
+  .plan {
+    padding: 15px !important;
+    -ms-grid-columns: 1fr 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
+  }
+  .plan img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 798px) {
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
 }
 /*# sourceMappingURL=style.css.map */
